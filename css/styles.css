@@ -1,0 +1,797 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+section {
+  padding: 3.9rem 0;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.6rem
+}
+
+.container {
+  width: 100%;
+  max-width: 122.5rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+img {
+  border-radius: 15px;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5) transparent);
+}
+
+.nav {
+  height: 7.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-toggle {
+  color: #fff;
+  font-size: 2.2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2.5rem;
+  cursor: pointer;
+  z-index: 1500;
+}
+
+.fa-times {
+  display: none !important;
+}
+
+.nav-list {
+  list-style: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  padding: 4.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 1250;
+  transform: translateX(-100%);
+  transition: transform .5s;
+  border-radius: 15px;
+}
+
+.nav::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 1000;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity .5s;
+}
+
+.open .fa-times {
+  display: block !important;
+}
+
+.open .fa-bars {
+  display: none;
+}
+
+.open .nav-list {
+  transform: translateX(0);
+}
+
+.open .nav::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.nav-item {
+  border-bottom: 2px solid rgba(255, 255, 255, .3);
+}
+
+.nav-link {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  margin-right: -2px;
+  transition: color .5s;
+  text-align: center;
+}
+
+.nav-link:hover {
+  color: #ffb6b9;
+  transform: scale(1.2);
+}
+
+.top-nav.open {
+  top: 0;
+  border-radius: initial;
+}
+
+/* HERO */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/header-img6.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: black;
+  /* text-shadow: 3px 3px white; */
+}
+
+.landing-text {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.bellagio {
+  font-size: 15rem;
+  border-bottom: 10px solid black;
+  font-weight: 900;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.beauty {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  border-bottom: 5px solid black;
+}
+
+.landing-text-2 {
+  font-size: 11rem;
+  font-weight: 900;
+  padding-top: 30px;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.text-2 {
+  border-bottom: 10px solid black;
+}
+
+/* OWN THE NIGHT*/
+.own-the-night {
+  font-family: 'Bebas Neue', cursive;
+  background-color: #ffb6b9;
+}
+
+.global-headline {
+  text-align: center;
+  margin-top: 3rem;
+  line-height: 1.5rem;
+}
+
+.own-the-night-text {
+  text-transform: uppercase;
+  font-size: 5.5rem;
+  line-height: 2.5;
+}
+
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: -2px;
+}
+
+.collection-btn {
+  font-size: 1.1rem;
+  background-color: #fff;
+  padding: .9rem 1.8rem;
+  color: #ffb6b9;
+  border-radius: .4rem;
+  transition: background-color .5s;
+  margin-top: 10px;
+}
+
+.collection-btn:hover,
+.collection-btn:focus {
+  color: #fff;
+  background-color: black;
+  transform: scale(1.1);
+}
+
+/* FASHION WEEK */
+.london-fashion-week {
+  background-color: black;
+}
+
+.fashion-headline {
+  font-size: 5.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', cursive;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+.fashion-week-info {
+  text-align: center;
+}
+
+.fashion-week-description {
+  margin-bottom: 3rem;
+}
+
+.fashion-week-description p {
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+  color: #fff;
+}
+
+.fashion-week-btn {
+  font-size: 1.1rem;
+  background-color: #fff;
+  padding: .9rem 1.8rem;
+  color: #ffb6b9;
+  border-radius: .4rem;
+  transition: background-color .5s;
+  margin-top: 30px;
+}
+
+.fashion-week-btn:hover,
+.fashion-week-btn:focus {
+  color: black;
+  background-color: #f7d9b8;
+  transform: scale(1.1);
+}
+
+/* ABOUT US */
+.about-us {
+  background-color: #ffb6b9;
+}
+
+.about-headline {
+  font-size: 5.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', cursive;
+  margin-bottom: 3rem;
+}
+
+.about-us-info {
+  text-align: center;
+}
+
+.about-us-description {
+  margin-bottom: 3rem;
+}
+
+.about-us-description p {
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+.about-us-btn {
+  font-size: 1.1rem;
+  background-color: black;
+  padding: .9rem 1.8rem;
+  color: #ffb6b9;
+  border-radius: .4rem;
+  transition: background-color .5s;
+  margin-top: 30px;
+}
+
+.about-us-btn:hover,
+.about-us-btn:focus {
+  color: black;
+  background-color: #f7d9b8;
+  transform: scale(1.1);
+}
+
+
+/* MENS CLOTHING */
+
+.clothing-men{
+  background-color: black;
+}
+
+.mens-clothing-headline {
+  font-size: 5.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', cursive;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+.mens-clothing-info {
+  text-align: center;
+}
+
+.mens-clothing-description{
+  color: #fff;
+}
+
+.mens-clothing-description {
+  margin-bottom: 3rem;
+}
+
+.mens-clothing-description p {
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+  color: #fff;
+}
+
+.mens-clothing-btn {
+  font-size: 1.1rem;
+  background-color: #fff;
+  padding: .9rem 1.8rem;
+  color: #ffb6b9;
+  border-radius: .4rem;
+  transition: background-color .5s;
+  margin-top: 30px;
+}
+
+.mens-clothing-btn:hover,
+.mens-clothing-btn:focus {
+  color: black;
+  background-color: #ffb6b9;
+  transform: scale(1.1);
+}
+
+/* WOMENS CLOTHING */
+
+.clothing-women{
+  background-color: #fff;
+  background-image: url("../images/rose2.gif");
+  background-size: cover;
+
+}
+
+.womens-clothing-headline {
+  font-size: 5.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', cursive;
+  margin-bottom: 3rem;
+  color: black;
+}
+
+.womens-clothing-info {
+  text-align: center;
+}
+
+.womens-clothing-description{
+  color: black;
+}
+
+.womens-clothing-description {
+  margin-bottom: 3rem;
+}
+
+.womens-clothing-description p {
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+  color: black;
+}
+
+.womens-clothing-btn {
+  font-size: 1.1rem;
+  background-color: black;
+  padding: .9rem 1.8rem;
+  color: #ffb6b9;
+  border-radius: .4rem;
+  transition: background-color .5s;
+  margin-top: 30px;
+}
+
+.womens-clothing-btn:hover,
+.womens-clothing-btn:focus {
+  color: black;
+  background-color: #ffb6b9;
+  transform: scale(1.1);
+}
+
+/* BAG */
+
+.bag{
+  background-color: black;
+}
+
+.bag-headline {
+  font-size: 5.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', cursive;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+.bag-info {
+  text-align: center;
+}
+
+.bag-description{
+  color: #fff;
+}
+
+.bag-description {
+  margin-bottom: 3rem;
+}
+
+.bag-description p {
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+  color: #fff;
+}
+
+.bag-btn {
+  font-size: 1.1rem;
+  background-color: #fff;
+  padding: .9rem 1.8rem;
+  color: #ffb6b9;
+  border-radius: .4rem;
+  transition: background-color .5s;
+  margin-top: 30px;
+}
+
+.bag-btn:hover,
+.bag-btn:focus {
+  color: black;
+  background-color: #ffb6b9;
+  transform: scale(1.1);
+}
+
+/* ACCESSORIES */
+
+.accessories{
+  /* background-color: #fff; */
+  background-image: url("../images/rose2.gif");
+  background-size: cover;
+}
+
+.accessories-headline {
+  font-size: 5.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', cursive;
+  margin-bottom: 3rem;
+  color: black;
+}
+
+.accessories-info {
+  text-align: center;
+}
+
+.accessories-description{
+  color: black;
+}
+
+.accessories-description {
+  margin-bottom: 3rem;
+}
+
+.accessories-description p {
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+  color: black;
+}
+
+.accessories-btn{
+  font-size: 1.1rem;
+  background-color: black;
+  padding: .9rem 1.8rem;
+  color: #ffb6b9;
+  border-radius: .4rem;
+  transition: background-color .5s;
+  margin-top: 30px;
+}
+
+.accessories-btn:hover,
+.accessories-btn:focus {
+  color: black;
+  background-color: #ffb6b9;
+  transform: scale(1.1);
+}
+
+/* FOOTER */
+
+footer {
+  padding: 7.9rem 0;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.back-to-top {
+  width: 7rem;
+  height: 7rem;
+  background-color: #121212;
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.back-to-top i {
+  display: block;
+  color: #fff;
+  font-size: 2rem;
+  padding: 2rem;
+  animation: up 2s infinite;
+}
+
+.footer-content {
+  overflow: hidden;
+  font-family: 'Bebas Neue', cursive
+}
+
+.footer-content h1{
+  margin-bottom: 150px;
+}
+
+
+.footer-content h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 3px;
+  margin-bottom: 3rem;
+
+}
+
+#company-name{
+  border-bottom: 2px solid white;
+}
+
+.footer-content p{
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer-content .asterisk {
+  margin: 2.4rem 0;
+}
+
+.footer-content-about {
+  margin-bottom: 5.4rem
+}
+
+.footer-content-about p {
+  line-height: 2;
+}
+
+.social-icons {
+  list-style: none;
+  margin-bottom: 5.4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons i {
+  font-size: 2rem;
+  color: #fff;
+  padding: .8rem 2rem;
+  opacity: .5;
+  transition: color .5s;
+}
+
+.social-icons i:hover,
+.social-icons i:focus {
+  color: #ffb6b9;
+}
+
+.newsletter-form {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-input {
+  width: 100%;
+  max-width: 25rem;
+  padding: 1rem;
+  border-radius: .4rem;
+}
+
+.newsletter-btn {
+  background-color: transparent;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 1.6rem;
+  padding: 1px .6rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10.5rem;
+}
+
+
+
+/* MEDIA QUERIES */
+@media screen and (min-width:1200px) {
+  section {
+    padding: 7.9rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .bellagio {
+    font-size: 10rem;
+  }
+
+  .landing-text-2{
+    font-size: 8rem;
+  }
+
+  .nav {
+    justify-content: space-around;
+  }
+
+  .nav-list {
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    padding: 0;
+    justify-content: initial;
+    flex-direction: row;
+    transition: initial;
+    transform: initial;
+  }
+
+  .nav-item {
+    margin: 0 2.4rem;
+    border: none;
+  }
+
+  .nav-item:last-child {
+    margin-right: 0;
+  }
+
+  .nav-link {
+    font-size: .9rem;
+  }
+
+  .active {
+    position: relative;
+  }
+
+  .active:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    left: 0;
+    bottom: -3px;
+  }
+
+  .mens-clothing-info,
+  .womens-clothing-info,
+  .bag-info,
+  .accessories-info,
+  .fashion-week-info,
+  .about-us-info {
+      display: flex;
+      align-items: center;
+
+    }
+
+    .mens-clothing-img,
+    .about-us-img,
+    .accessories-img {
+      width: 92rem;
+    }
+
+    .mens-clothing-info,
+    .womens-clothing-info > div {
+      flex: 1;
+    }
+
+    .padding-right {
+      padding-right: 7rem;
+    }
+
+    .padding-left{
+      padding-left: 7rem;
+    }
+
+
+
+
+    .footer-content {
+      max-width: 77.5rem;
+      margin: auto;
+    }
+
+    .footer-content-about {
+      max-width: 51.3rem;
+      margin: 0 auto 5.4rem;
+    }
+
+    .footer-content-divider {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .social-media,
+    .newsletter-form {
+      width: 100%;
+      max-width: 27.3rem;
+      margin: 0 1rem;
+    }
+
+    .social-icons i {
+      opacity: 1;
+    }
+
+    .newsletter-btn {
+      margin-left: 9.7rem;
+    }
+
+     .newsletter-input {
+       margin-right: 2rem;
+
+     }
+
+  }
+
+
+/* KEY FRAMES */
+
+@keyframes up {
+  0% {
+    opacity: 0;
+  }
+
+  50%{
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+}
